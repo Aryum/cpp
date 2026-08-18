@@ -6,7 +6,7 @@
 /*   By: ricsanto <ricsanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 13:02:59 by ricsanto          #+#    #+#             */
-/*   Updated: 2026/03/02 13:29:47 by ricsanto         ###   ########.fr       */
+/*   Updated: 2026/08/18 10:42:30 by ricsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Dog& Dog::operator=(const Dog& other)
 	{
 		Animal::operator=(other);
 		delete _brain;
-		_brain = other._brain;
+		_brain = new Brain(*other._brain);
 	}
 	return *this;
 }
